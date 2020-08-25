@@ -1,0 +1,46 @@
+@import '@/assets/styles/var.scss';
+
+.container{
+  display: flex;
+  background-color: #F16120;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  width: $wrapper-width*100%;
+  height: $nav-height;
+  border-radius: $nav-height / 2;
+  position: absolute;
+  bottom: 0px;
+  transform: translateY(50%);
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+.nav__ul__tab{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  li{
+    text-decoration: none;
+    display: block;
+    margin:0 20px;
+    padding: 3px 5px;
+    cursor: pointer;
+    user-select: none;
+    height: 30px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &:hover{
+      background-color: #F59164;
+      border-radius: 5px;
+    }
+  }
+}
+.nav__span__arrow{
+  width: 25px;
+  margin-left: 5px;
+  transform: translateY();
+
+}
