@@ -1,0 +1,35 @@
+@import '../../../theme/default.scss';
+
+.cb__post--comment{
+  .pc__title--wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    h1{
+      font-weight: $highlight_font_weight;
+      font-size: $highlight_font_size;
+    }
+  }
+  .cb__post--now{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .cb__post--btns{
+      button{
+        color: #ffffff;
+        border: none;
+        &:first-child{
+          background-color: $first_color;
+        }
+        &:nth-child(2){
+          background-color: $highlight_color;
+        }
+      }
+      .ant-btn{
+        margin-left: 5px;
+      }
+    }
+  }
+}

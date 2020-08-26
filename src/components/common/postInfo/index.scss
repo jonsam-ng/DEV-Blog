@@ -1,0 +1,46 @@
+@import '../../../theme/default.scss';
+$postif_user_avatar_size: 50px;
+.postif__container{
+  text-align: left;
+  .postif__publish--wrapper{
+    margin-bottom: 20px;
+    color: $second_color;
+  }
+  .postif__author--wrapper{
+    position: relative;
+    padding-left: 20px + $postif_user_avatar_size;
+    display: felx;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    .ab__author--avatar{
+      width: $postif_user_avatar_size;
+      height: $postif_user_avatar_size;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    p{
+      &:first-of-type{
+        font-weight: $highlight_font_weight;
+        font-size: $album_font_size;
+        color: $first_color;
+      }
+      &:nth-of-type(2){
+        font-size: $highlight_font_size;
+      }
+    }
+    .postif__social--wrapper{
+      margin-top: 20px;
+      .ant-btn{
+        border: none;
+        box-shadow: none;
+        margin-right: 10px;
+        &:hover{
+          color: $first_color;
+        }
+      }
+    }
+  }
+}

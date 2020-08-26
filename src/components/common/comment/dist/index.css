@@ -1,0 +1,40 @@
+.comment__container {
+  width: 100%;
+  border: 1px solid #DBDBDB;
+  padding: 30px;
+  margin: 10px 0;
+  border-radius: 30px;
+}
+.comment__container .comment__user--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.comment__container .comment__user--wrapper .user__avatar--left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.comment__container .comment__user--wrapper .user__avatar--left .comment__user--avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.comment__container .comment__user--wrapper .user__avatar--left span {
+  color: #000000;
+}
+.comment__container .comment__user--wrapper .user__date--right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.comment__container .comment__user--wrapper .user__date--right span {
+  margin-right: 10px;
+}
+.comment__container .comment__reply-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

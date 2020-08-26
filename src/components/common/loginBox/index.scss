@@ -1,9 +1,9 @@
-@import '../../../theme//default.scss';
+@import '../../../theme/default.scss';
 $box_padding: 15px;
 .loginbox__container{
   width: 100%;
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: $card_border_radius;
   text-align: left;
   padding: $box_padding;
   .loginbox__wrapper--title{

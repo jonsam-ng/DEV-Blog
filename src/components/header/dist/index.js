@@ -9,7 +9,6 @@ require("./index.scss");
 var Header = function (props) {
     var _a = react_i18next_1.useTranslation(), t = _a.t, i18n = _a.i18n;
     var history = react_router_dom_1.useHistory();
-    console.log(history);
     return (react_1["default"].createElement("div", { className: 'header__container' },
         react_1["default"].createElement("div", { className: "header__wrapper--center" },
             react_1["default"].createElement("div", { className: "header__logo--left" },

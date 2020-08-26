@@ -1,6 +1,7 @@
 import React from 'react';
 import {IArticle} from '../../../interface/index';
 import Image from '../../../components/common/Image';
+import {useTranslation} from 'react-i18next';
 import HTMLRender from '../../../components/common/HTMLRender';
 import './index.scss';
 
@@ -10,12 +11,13 @@ interface IProps {
 const ab_tag_bg_colors = ['#56C4F6', '#1C1C1C', '#028334', '#2A2566', '#562865', '#F7DF1C'];
 
 const ArticleBox = (props: IProps) => {
+  const {t} = useTranslation();
   const {article} = props;
   const {article: articleDetail, user} = article;
   const {postID, album, title, tags, author, postDate, updateDate, readtime, content, like, thanks, comments, readinglist} = articleDetail;
   const {userID, name, avatar, github, website, email, intro, work, company, age, joinDate, links, labels, phone} = user;
   return (
-    <div className="ab__container">
+    <div className="ab__container card">
       {/* 封面 */}  
       {
         album && <Image
@@ -45,7 +47,7 @@ const ArticleBox = (props: IProps) => {
             />
             <p>
               <span><b>{author}</b></span>
-              <span><i>发布于&nbsp;</i><b>{postDate}</b>・<i>更新于&nbsp;</i><b>{updateDate}</b>・<b>{readtime}</b><i>分钟阅读</i></span>
+              <span><i>{t('posted_on')}&nbsp;</i><b>{postDate}</b>・<i>{t('updated_on')}&nbsp;</i><b>{updateDate}</b>・<b>{readtime}</b><i>{t('min_read')}</i></span>
             </p>
           </div>
         </div>

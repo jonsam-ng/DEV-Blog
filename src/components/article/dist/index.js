@@ -2,6 +2,8 @@
 exports.__esModule = true;
 var react_1 = require("react");
 var articleBox_1 = require("../../components/common/articleBox");
+var postInfo_1 = require("../../components/common/postInfo");
+var commentBox_1 = require("../../components/common/commentBox");
 var react_document_title_1 = require("react-document-title");
 var react_i18next_1 = require("react-i18next");
 var antd_1 = require("antd");
@@ -63,6 +65,9 @@ var postData = {
                 name: 'Ivan Huerta'
             },
             comment: {
+                commentID: 11,
+                time: new Date().getTime(),
+                like: 647,
                 content: "Thanks"
             }
         },
@@ -73,6 +78,9 @@ var postData = {
                 name: 'Nikita Sobolev'
             },
             comment: {
+                commentID: 15,
+                time: new Date().getTime(),
+                like: 647,
                 content: "<div class=\"body \"><p>I would recommend to use <a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fgithub.com%2Fwemake-services%2Fwemake-vue-template\" rel=\"nofollow\">wemake-vue-template</a>to get started with <code>Vue</code>and <code>Nuxt</code>.</p><p>It allows you to start easily with the full-featured project. Features:</p><ul><li>Proven to work on both small and large scale projects</li><li>Always up-to-date with the help of <a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fgithub.com%2Fwemake-services%2Fwemake-vue-template%2Fpulls%3Futf8%3D%25E2%259C%2593%26q%3Dis%253Apr%2520author%253Aapp%252Fdependabot\" rel=\"nofollow\">@dependabot</a></li><li>Latest <a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fnuxtjs.org%2F\" rel=\"nofollow\">nuxt</a>for server-side rendering</li><li>Full <code>typescript</code>support,including <code>Vue</code>'s SFC,<code>Vuex</code>,and tests</li><li>Tools to write business logics including:DI,IoC,runtime type validation</li><li>Linting with <a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Feslint.org%2F\" rel=\"nofollow\">eslint</a>+<a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fgithub.com%2Fwemake-services%2Fstylelint-config-strict-scss\" rel=\"nofollow\">stylelint</a></li><li><a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Ffacebook.github.io%2Fjest%2F\" rel=\"nofollow\">jest</a>for unit tests and <a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fgithub.com%2FDevExpress%2Ftestcafe\" rel=\"nofollow\">testcafe</a>for end-to-end testing</li><li><code>docker</code>optional support for development,testing,and production</li><li><a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fabout.gitlab.com%2Ffeatures%2Fgitlab-ci-cd%2F\" rel=\"nofollow\">Gitlab CI</a>with full <code>test</code>and <code>deploy</code>pipeline configured by default</li><li>Meaningful <a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fwemake-services.gitbook.io%2Fwemake-vue-template%2F\" rel=\"nofollow\">docs</a>,covering almost every aspect of the project,including <a href=\"https://52proxy.xyz/index.php?q=http%3A%2F%2Fusejsdoc.org%2F\" rel=\"nofollow\">jsdoc</a>annotations</li><li>Full <code>vscode</code>support and list of <a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fgithub.com%2Fwemake-services%2Fwemake-vue-template%2Ftree%2Fmaster%2Ftemplate%2F.vscode\" rel=\"nofollow\">suggested settings and plugins</a></li><li>Easy <a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fwemake-services.gitbook.io%2Fwemake-vue-template%2F%23updating-template\" rel=\"nofollow\">update process</a>,so your template will always be up-to-date</li></ul><button class=\"reaction-button\" id=\"button-for-comment-288690\" data-comment-id=\"288690\" title=\"heart\"><img alt=\"Favorite heart outline button\" src=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fpracticaldev-herokuapp-com.freetls.fastly.net%2Fassets%2Ffavorite-heart-outline-button-0e707584abc59ba8dfe82cacff79233a8e1cb9791379a4d9715bd8318e72eb6b.svg\"><img class=\"voted-heart\" src=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fpracticaldev-herokuapp-com.freetls.fastly.net%2Fassets%2Femoji%2Femoji-one-heart-f5a59d5d1b6cfe4e2c956c0ed63cd644820683dcd5c5a051d810fa6efe67a6ce.png\" alt=\"Favorite heart button\"></button></div>"
             }
         },
@@ -112,7 +120,11 @@ var Article = function (props) {
                 react_1["default"].createElement(antd_1.Col, { className: "gutter-row", span: 3 },
                     react_1["default"].createElement("div", { style: { border: '2px solid red' } }, "\u5DE6\u4FA7\u4FA7\u8FB9\u680F")),
                 react_1["default"].createElement(antd_1.Col, { className: "gutter-row", span: 15 },
-                    react_1["default"].createElement(articleBox_1["default"], { article: postData.article })),
+                    react_1["default"].createElement(articleBox_1["default"], { article: postData.article }),
+                    react_1["default"].createElement("div", { className: "card_divider" }),
+                    react_1["default"].createElement(postInfo_1["default"], { article: postData.article }),
+                    react_1["default"].createElement("div", { className: "card_divider" }),
+                    react_1["default"].createElement(commentBox_1["default"], { comments: postData.comments })),
                 react_1["default"].createElement(antd_1.Col, { className: "gutter-row", span: 6 },
                     react_1["default"].createElement("div", { style: { border: '2px solid red' } }, "\u53F3\u4FA7\u4FA7\u8FB9\u680F"))))));
 };

@@ -1,0 +1,44 @@
+@import '../../../theme/default.scss';
+@import './variable.scss';
+
+.comment__container{
+  width: 100%;
+  // height: $comment_box_height;
+  border: 1px solid $comment_box_border_color;
+  padding: 30px;
+  margin: 10px 0;
+  border-radius: 30px;
+  .comment__user--wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    .user__avatar--left{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .comment__user--avatar{
+        width: $cmment_user_avatar_size;
+        height: $cmment_user_avatar_size;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+      span{
+        color: $first_color;
+      }
+    }
+    .user__date--right{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      span{
+        margin-right: 10px;
+      }
+    }
+  }
+  .comment__reply-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

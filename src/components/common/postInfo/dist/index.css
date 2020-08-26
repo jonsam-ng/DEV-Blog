@@ -1,0 +1,42 @@
+.postif__container {
+  text-align: left;
+}
+.postif__container .postif__publish--wrapper {
+  margin-bottom: 20px;
+  color: #4D5760;
+}
+.postif__container .postif__author--wrapper {
+  position: relative;
+  padding-left: 70px;
+  display: felx;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.postif__container .postif__author--wrapper .ab__author--avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.postif__container .postif__author--wrapper p:first-of-type {
+  font-weight: 800;
+  font-size: 40px;
+  color: #000000;
+}
+.postif__container .postif__author--wrapper p:nth-of-type(2) {
+  font-size: 16px;
+}
+.postif__container .postif__author--wrapper .postif__social--wrapper {
+  margin-top: 20px;
+}
+.postif__container .postif__author--wrapper .postif__social--wrapper .ant-btn {
+  border: none;
+  box-shadow: none;
+  margin-right: 10px;
+}
+.postif__container .postif__author--wrapper .postif__social--wrapper .ant-btn:hover {
+  color: #000000;
+}

@@ -9,7 +9,6 @@ import './index.scss';
 const Header:React.FC = (props: any) => {
   const { t, i18n } = useTranslation();
   const history = useHistory();
-  console.log(history);
   return (
     <div className='header__container'>
       <div className="header__wrapper--center">

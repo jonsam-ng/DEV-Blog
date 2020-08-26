@@ -4,7 +4,7 @@
  * @Author: wuqingshan
  * @Date: 2020-07-21 16:17:07
  * @LastEditors: wuqingshan
- * @LastEditTime: 2020-08-26 10:23:33
+ * @LastEditTime: 2020-08-26 13:33:55
 -->
 
 # DEV Community FE
@@ -27,3 +27,4 @@
 - i18n: react-i18next
 - animation: ant motion
 - test: jest
+- API: GraphQL (one request one page)

@@ -1,3 +1,9 @@
+/**
+ * @Author wuqingshan
+ * @Description 公共样式
+ * @Compatibility 
+ * @Date 2020-08-26 13:10:00 Wednesday
+ */
 @import '~antd/dist/antd.css';
 @import './theme/default.scss';
 body {
@@ -22,4 +28,14 @@ code {
 p, h1{
   margin: 0;
   padding: 0;
+}
+.card_divider{
+  width: 100;
+  height: $card_divider_height;
+  background-color: transparent;
+}
+.card{
+  background-color: $card_bg_color;
+  border-radius: $card_border_radius;
+  padding: $card_padding;
 }

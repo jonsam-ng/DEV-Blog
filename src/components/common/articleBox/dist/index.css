@@ -1,12 +1,11 @@
 .ab__container {
   text-align: left;
-  background-color: #ffffff;
 }
 .ab__container .ab__image--album {
   height: 300px;
 }
 .ab__container .ab__content--wrapper {
-  padding: 40px 40px;
+  padding: 40px;
 }
 .ab__container .ab__content--wrapper .ab__title--wrapper {
   margin-bottom: 40px;
@@ -17,7 +16,6 @@
   margin-bottom: 10px;
 }
 .ab__container .ab__content--wrapper .ab__title--wrapper .ab__title--tags {
-  background-color: #145252;
   padding: 4px 6px;
   color: #ffffff;
   border-radius: 6px;

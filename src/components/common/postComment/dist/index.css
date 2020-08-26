@@ -1,0 +1,29 @@
+.cb__post--comment .pc__title--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.cb__post--comment .pc__title--wrapper h1 {
+  font-weight: 800;
+  font-size: 16px;
+}
+.cb__post--comment .cb__post--now {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cb__post--comment .cb__post--now .cb__post--btns button {
+  color: #ffffff;
+  border: none;
+}
+.cb__post--comment .cb__post--now .cb__post--btns button:first-child {
+  background-color: #000000;
+}
+.cb__post--comment .cb__post--now .cb__post--btns button:nth-child(2) {
+  background-color: #3B49DF;
+}
+.cb__post--comment .cb__post--now .cb__post--btns .ant-btn {
+  margin-left: 5px;
+}
