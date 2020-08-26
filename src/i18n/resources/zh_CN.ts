@@ -4,12 +4,13 @@
  * @Author: wuqingshan
  * @Date: 2020-08-02 19:03:25
  * @LastEditors: wuqingshan
- * @LastEditTime: 2020-08-26 09:29:49
+ * @LastEditTime: 2020-08-26 10:42:00
  */
 const siteName = 'DEV';
 export default {
   site_name: siteName, // 站点名称
-  loading: '正在加载 ...', // 页面loading
+  loading: '玩命加载中 ...', // 页面loading
+  dev_community: 'DEV社区', // Home title
   // -------------------------------------------------- //
   // -------------------------------------------------- //
   // -------------------- Header  --------------------- //
@@ -45,6 +46,4 @@ export default {
   join_site: `加入 ${siteName}`,
   login_in: '登录',
   sign_up: '注册',
-  
-  dev_community: 'DEV社区', // Home title
 }

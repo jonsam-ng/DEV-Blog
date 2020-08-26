@@ -4,12 +4,13 @@
  * @Author: wuqingshan
  * @Date: 2020-08-02 19:02:24
  * @LastEditors: wuqingshan
- * @LastEditTime: 2020-08-26 09:28:03
+ * @LastEditTime: 2020-08-26 10:41:36
  */ 
 const siteName = 'DEV';
 export default {
   site_name: siteName,
   loading: 'loading ...',
+  dev_community: 'DEV Community',
   search_tip: 'Search...',
   write_a_post: 'Write',
   posts: 'Posts',
@@ -25,5 +26,4 @@ export default {
   join_site: `join ${siteName}`,
   login_in: 'Login In',
   sign_up: 'Sign Up',
-  dev_community: 'DEV Community',
 }

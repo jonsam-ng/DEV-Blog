@@ -2,6 +2,9 @@
 exports.__esModule = true;
 var react_1 = require("react");
 var articleBox_1 = require("../../components/common/articleBox");
+var react_document_title_1 = require("react-document-title");
+var react_i18next_1 = require("react-i18next");
+var antd_1 = require("antd");
 require("./index.scss");
 var lodash_1 = require("lodash");
 // TODO 通过postID请求数据
@@ -9,14 +12,17 @@ var postData = {
     article: {
         article: {
             postID: 1,
+            album: 'https://res.cloudinary.com/practicaldev/image/fetch/s--0J-QW6Fv--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/m33raj4cdipc5sv7c57y.png',
             title: '5 tools to supercharge your Flutter development',
             tags: ['flutter', 'dart', 'vscode', 'beginners'],
             author: 'Ivan Huerta',
             postDate: new Date().getTime(),
+            updateDate: new Date().getTime(),
             readtime: lodash_1.random(10),
             content: "<div class=\"crayons-article__main\"><div class=\"crayons-article__body text-styles spec__body\" data-article-id=\"436503\" id=\"article-body\"><p>If you've read my previous posts, you probably know I'm addicted to getting things done quickly. At the time of me writing this, I'm preparing to mentor a hackathon that's being hosted online out of El Paso, TX. So I quickly wanted to put together a couple of tools &amp; packages that can help new Flutter developers get going &amp; hopefully create an MVP within a hackathon's time period.</p><h2><a name=\"vscode\" href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fdev.to%2Fparabeac%2F5-tools-to-supercharge-your-flutter-development-1m0l%23vscode\" class=\"anchor\"></a><a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fcode.visualstudio.com%2Fdownload\">VSCode</a></h2><p>This is the premier IDE from Microsoft &amp; has gotten a lot of traction across the global developer community for creating plugins. You can download VSCode here &amp; I recommend installing the plugins for<a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3DDart-Code.flutter\">Flutter</a> &amp;<a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3DDart-Code.dart-code\">Dart</a>. Alternatively, you can use Android Studio, but in our opinion, VSCode is just much lighter &amp; friendlier to use.</p><h2><a name=\"firebase\" href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fdev.to%2Fparabeac%2F5-tools-to-supercharge-your-flutter-development-1m0l%23firebase\" class=\"anchor\"></a><a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Ffirebase.google.com\">Firebase</a></h2><p>Firebase is a tool where you can create a backend &amp; database. You can manually populate data which is nice for getting some test data in on the backend. You can use the Firebase Flutter package to integrate your mobile app with your Firebase. Although I'm not the biggest fan of the way this package works, it gets the job done for a Minimum Viable Product.</p><h2><a name=\"http-package\" href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fdev.to%2Fparabeac%2F5-tools-to-supercharge-your-flutter-development-1m0l%23http-package\" class=\"anchor\"></a><a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fpub.dev%2Fpackages%2Fhttp\">HTTP Package</a></h2><p>For applications that need to talk to an API, the HTTP package is an excellent package to use for talking to API endpoints. Below is a snippet of how simple a POST request is.<br></p><div class=\"highlight\"><pre class=\"highlight plaintext\"><code>import 'package:http/http.dart' as http;var url = 'https://example.com/whatsit/create';var response = await http.post(url, body: {'name': 'doodle'});</code></pre></div><h2><a name=\"jsonserializable\" href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fdev.to%2Fparabeac%2F5-tools-to-supercharge-your-flutter-development-1m0l%23jsonserializable\" class=\"anchor\"></a><a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fpub.dev%2Fpackages%2Fjson_serializable\">JSON_Serializable</a></h2><p>This is a more advanced tool but extremely useful. Often times when receiving &amp; sending JSON data, you likely want to convert the data into dart object(s). Most of the time this requires additional time and boilerplate code to complete. This is where Serializing comes in. In this context, Deserializing just means converting the JSON objects into a format that allows your dart code to interact directly with these objects through dart rather than JSON or maps. Why spend additional time to map classes into a format that could be sent &amp; received across the network when json_serilizable can do it automatically. Additionally, doing it by hand increases the risk of creating bugs in the objects that are serialized. This dart package allows the serializable classes by putting dart annotations into the classes that are going to be serialized and running<code>pub run build_runner</code>.</p><h2><a name=\"parabeac\" href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fdev.to%2Fparabeac%2F5-tools-to-supercharge-your-flutter-development-1m0l%23parabeac\" class=\"anchor\"></a><a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fgithub.com%2FParabeac%2FParabeac-Core\">Parabeac</a></h2><p><a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fres.cloudinary.com%2Fpracticaldev%2Fimage%2Ffetch%2Fs--T5WS98tW--%2Fc_limit%252Cf_auto%252Cfl_progressive%252Cq_66%252Cw_880%2Fhttps%3A%2F%2Fkindling-sketch.s3.amazonaws.com%2Fparabeac-high-level-animation2.gif\" class=\"article-body-image-wrapper\"><img src=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fres.cloudinary.com%2Fpracticaldev%2Fimage%2Ffetch%2Fs--T5WS98tW--%2Fc_limit%252Cf_auto%252Cfl_progressive%252Cq_66%252Cw_880%2Fhttps%3A%2F%2Fkindling-sketch.s3.amazonaws.com%2Fparabeac-high-level-animation2.gif\" alt=\"Parabeac High-Level Animation\" loading=\"lazy\"></a></p><p>Ok, ok. I might be a little biased here, but we made this tool because we wanted to produce apps faster for ourselves. With Parabeac you can convert design files from<a href=\"https://52proxy.xyz/index.php?q=https%3A%2F%2Fwww.sketch.com\">Sketch</a> (as of this writing) &amp; soon Figma directly into Flutter code. Just follow the README &amp; you'll be on your way.</p><p>Thanks for reading. Hopefully, this will be a resource for you to get your MVP up and running in no time. Or at least in less time. What are your favorite tools for developing Flutter applications?</p></div></div>",
             like: lodash_1.random(1000),
             thanks: lodash_1.random(1000),
+            comments: lodash_1.random(1000),
             readinglist: lodash_1.random(1000)
         },
         user: {
@@ -31,7 +37,20 @@ var postData = {
             company: 'xylink',
             age: 18,
             joinDate: new Date().getTime(),
-            links: ['http://jonsam.site', 'http://jonsam.site', 'http://jonsam.site'],
+            links: [
+                {
+                    name: 'Facebook',
+                    url: 'http://jonsam.site'
+                },
+                {
+                    name: 'Youtube',
+                    url: 'http://jonsam.site'
+                },
+                {
+                    name: 'Weibo',
+                    url: 'http://jonsam.site'
+                },
+            ],
             labels: ['宅男', 'young', '篮球🏀'],
             phone: 16476427642
         }
@@ -86,7 +105,15 @@ var postData = {
     ]
 };
 var Article = function (props) {
-    return (react_1["default"].createElement("div", { className: 'act__container' },
-        react_1["default"].createElement(articleBox_1["default"], { article: postData.article })));
+    var t = react_i18next_1.useTranslation().t;
+    return (react_1["default"].createElement(react_document_title_1["default"], { title: t('site_name') + ": " + postData.article.article.title },
+        react_1["default"].createElement("div", { className: 'act__container' },
+            react_1["default"].createElement(antd_1.Row, { gutter: 20 },
+                react_1["default"].createElement(antd_1.Col, { className: "gutter-row", span: 3 },
+                    react_1["default"].createElement("div", { style: { border: '2px solid red' } }, "\u5DE6\u4FA7\u4FA7\u8FB9\u680F")),
+                react_1["default"].createElement(antd_1.Col, { className: "gutter-row", span: 15 },
+                    react_1["default"].createElement(articleBox_1["default"], { article: postData.article })),
+                react_1["default"].createElement(antd_1.Col, { className: "gutter-row", span: 6 },
+                    react_1["default"].createElement("div", { style: { border: '2px solid red' } }, "\u53F3\u4FA7\u4FA7\u8FB9\u680F"))))));
 };
 exports["default"] = Article;

@@ -1,2 +1,50 @@
 @import './variable.scss';
 @import '../../../theme//default.scss';
+
+.ab__container {
+  text-align: left;
+  background-color: $card_bg_color;
+  // ---------- 封面 ---------- //
+  .ab__image--album {
+    height: $ab_album_height;
+  }
+  .ab__content--wrapper{
+    padding: $ab_content_padding;
+    // ---------- 标题 ---------- //
+    .ab__title--wrapper {
+      margin-bottom: 40px;
+      h1 {
+        font-weight: $highlight_font_weight;
+        font-size: $album_font_size;
+        margin-bottom: 10px;
+      }
+      .ab__title--tags{
+        background-color: rgb(20, 82, 82);
+        padding: 4px 6px;
+        color: #ffffff;
+        border-radius: 6px;
+        display: inline-block;
+        margin-right: 8px;
+        cursor: pointer;
+      }
+      .ab__title--author{
+        margin: 20px 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .ab__author--avatar{
+          width: $ab_avatar_size;
+          height: 30px;
+          border-radius: 50%;
+          margin-right: 15px;
+        }
+        p span{
+          &:first-of-type{
+            margin-right: 10px;
+            font-size: $highlight_font_size;
+          }
+        }
+      }
+    }
+  }
+}

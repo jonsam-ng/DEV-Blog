@@ -6,12 +6,13 @@ exports.__esModule = true;
  * @Author: wuqingshan
  * @Date: 2020-08-02 19:02:24
  * @LastEditors: wuqingshan
- * @LastEditTime: 2020-08-26 09:28:03
+ * @LastEditTime: 2020-08-26 10:41:36
  */
 var siteName = 'DEV';
 exports["default"] = {
     site_name: siteName,
     loading: 'loading ...',
+    dev_community: 'DEV Community',
     search_tip: 'Search...',
     write_a_post: 'Write',
     posts: 'Posts',
@@ -26,6 +27,5 @@ exports["default"] = {
     min_read: 'min read',
     join_site: "join " + siteName,
     login_in: 'Login In',
-    sign_up: 'Sign Up',
-    dev_community: 'DEV Community'
+    sign_up: 'Sign Up'
 };

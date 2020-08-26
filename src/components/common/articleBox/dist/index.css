@@ -1,0 +1,43 @@
+.ab__container {
+  text-align: left;
+  background-color: #ffffff;
+}
+.ab__container .ab__image--album {
+  height: 300px;
+}
+.ab__container .ab__content--wrapper {
+  padding: 40px 40px;
+}
+.ab__container .ab__content--wrapper .ab__title--wrapper {
+  margin-bottom: 40px;
+}
+.ab__container .ab__content--wrapper .ab__title--wrapper h1 {
+  font-weight: 800;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.ab__container .ab__content--wrapper .ab__title--wrapper .ab__title--tags {
+  background-color: #145252;
+  padding: 4px 6px;
+  color: #ffffff;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.ab__container .ab__content--wrapper .ab__title--wrapper .ab__title--author {
+  margin: 20px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.ab__container .ab__content--wrapper .ab__title--wrapper .ab__title--author .ab__author--avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.ab__container .ab__content--wrapper .ab__title--wrapper .ab__title--author p span:first-of-type {
+  margin-right: 10px;
+  font-size: 16px;
+}
