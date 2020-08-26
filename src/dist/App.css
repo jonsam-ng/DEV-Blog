@@ -1,0 +1,21 @@
+.App .App_Body {
+  padding: 0 20px 0 20px;
+  margin-top: 56px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App .App_Body .CenterAxios {
+  max-width: 1248px;
+}
+@media screen and (max-width: 1248px) {
+  .App .App_Body .CenterAxios {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1248px) {
+  .App .App_Body .CenterAxios {
+    width: 1248px;
+  }
+}

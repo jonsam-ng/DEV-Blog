@@ -1,12 +1,11 @@
 import React, { FC, lazy, Suspense } from 'react';
-import Router from './router';
+import Routers from './router';
 import useStore from './stores/index';
 import { observer } from 'mobx-react';
 import { Spin, BackTop } from 'antd';
 // import CircleLoading from './components/common/loading/circleLoading';
 import './App.scss';
 // import * as Sentry from '@sentry/browser';
-const Header = lazy(() => import('./components/header'));
 
 // const onError = e => {
 //   Sentry.withScope(scope => {
@@ -18,14 +17,13 @@ const Header = lazy(() => import('./components/header'));
 // // 必须要用addEventListener，并且第三个参数为true，不然错误无法冒泡到app.jsx中
 // window.addEventListener('error', onError, true);
 
-const App: FC = () => {
+const App: FC = (props) => {
   const { baseStoreDecorate, baseStore } = useStore();
   const { idx, strIdx, add } = baseStore;
   return (
     <Suspense fallback={<Spin tip="Loading..." style={{marginTop: '2%'}}></Spin>}>
       <div className="App">
-        <Header></Header>
-        <Router></Router>
+        <Routers />
         <BackTop />
       </div>
     </Suspense> 

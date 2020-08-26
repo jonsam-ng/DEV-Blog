@@ -1,0 +1,28 @@
+.postnav__container {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.postnav__container h1 {
+  font-size: 20px;
+  font-weight: 800;
+}
+.postnav__container .postnav__nav--wrapper .postnav__nav--menu {
+  background-color: #EEF0F1;
+}
+.postnav__container .postnav__nav--wrapper .postnav__nav--menu .ant-menu-item {
+  line-height: 40px;
+  height: 40px;
+  margin-top: 0;
+  margin: 0 15px;
+}
+.postnav__container .postnav__nav--wrapper .postnav__nav--menu .ant-menu-item:hover {
+  color: #3B49DF;
+  border-bottom-color: #DBDFEF;
+}
+.postnav__container .postnav__nav--wrapper .postnav__nav--menu .ant-menu-item.ant-menu-item-selected {
+  color: #000000;
+  border-bottom-color: #3B49DF;
+  font-weight: 800;
+}

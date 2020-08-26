@@ -1,0 +1,86 @@
+.header__container {
+  margin: 0 auto;
+  height: 56px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #cccccc;
+  padding: 0 20px 0 20px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100vw;
+}
+.header__container .header__wrapper--center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1248px;
+}
+@media screen and (max-width: 1248px) {
+  .header__container .header__wrapper--center {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1248px) {
+  .header__container .header__wrapper--center {
+    width: 1248px;
+  }
+}
+.header__container .header__wrapper--center .header__logo--left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header__container .header__wrapper--center .header__logo--left .header__blk--logo {
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.header__container .header__wrapper--center .header__logo--left .header__input--search {
+  height: 40px;
+  width: 420px;
+  border-radius: 5px;
+  padding: 7px 8px;
+  border: 1px solid #575555;
+  outline: none;
+  padding-left: 15px;
+}
+.header__container .header__wrapper--center .header__profle--right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+}
+.header__container .header__wrapper--center .header__profle--right button {
+  margin-left: 15px;
+}
+.header__container .header__wrapper--center .header__profle--right button:first-of-type {
+  background-color: #3B49DF;
+  font-weight: 800;
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
+}
+.header__container .header__wrapper--center .header__profle--right button:not(:first-of-type) {
+  background-color: transparent;
+  color: #4D5760;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 50%;
+}
+.header__container .header__wrapper--center .header__profle--right button:not(:first-of-type) :hover {
+  color: #000000;
+}

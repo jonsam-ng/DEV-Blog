@@ -1,0 +1,63 @@
+.post__container {
+  margin: 20px 0;
+  cursor: pointer;
+}
+.post__container .post__image--album {
+  height: 270px;
+}
+.post__container .post__board--wrapper {
+  padding: 20px;
+  padding-left: 58px;
+  background-color: #FFFFFF;
+  position: relative;
+  text-align: left;
+  border-radius: 0px 0px 10px 10px;
+}
+.post__container .post__board--wrapper .post__image--avatar {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.post__container .post__board--wrapper .post__user--info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: left;
+  height: 30px;
+}
+.post__container .post__board--wrapper .post__user--info p:first-of-type {
+  font-weight: 600;
+  line-height: 20px;
+}
+.post__container .post__board--wrapper .post__user--info p:nth-of-type(2) {
+  font-size: 12px;
+  line-height: 10px;
+}
+.post__container .post__board--wrapper .post__article--title h1 {
+  font-weight: 800;
+  font-size: 20px;
+  padding: 10px 0;
+}
+.post__container .post__board--wrapper .post__article--title .post__article--tag {
+  font-size: 12px;
+  margin-right: 10px;
+}
+.post__container .post__board--wrapper .post__article--count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.post__container .post__board--wrapper .post__article--count .post__count--left {
+  height: 20px;
+}
+.post__container .post__board--wrapper .post__article--count .post__count--left p {
+  font-weight: 600;
+  line-height: 20px;
+}
+.post__container .post__board--wrapper .post__article--count .post__count--left p span {
+  margin-right: 20px;
+}

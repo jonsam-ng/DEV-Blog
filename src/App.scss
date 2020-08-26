@@ -1,3 +1,21 @@
+@import './theme/default.scss';
 .App {
-  
+  .App_Body{
+    padding: $body_padding;
+    // ---------- 留出header的高度 ---------- //
+    margin-top: $header_height;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .CenterAxios{
+      max-width: $max_center_width;
+      @media screen and (max-width: $max_center_width){
+        width: 100%;
+      }
+      @media screen and (min-width: $max_center_width){
+        width: $max_center_width;
+      }
+    }
+  }
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const pageFooter = (props: any) => {
+const Footer = (props: any) => {
 	return <div className="container">PageFooter</div>;
 };
 
-export default pageFooter;
+export default Footer;
 
