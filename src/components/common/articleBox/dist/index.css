@@ -5,6 +5,8 @@
   height: 300px;
 }
 .ab__container .ab__content--wrapper {
+  background-color: #ffffff;
+  border-radius: 8px;
   padding: 40px;
 }
 .ab__container .ab__content--wrapper .ab__title--wrapper {

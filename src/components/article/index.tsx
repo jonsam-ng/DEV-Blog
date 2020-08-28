@@ -2,12 +2,14 @@ import React from 'react';
 import ArticleBox from '../../components/common/articleBox';
 import PostInfo from '../../components/common/postInfo';
 import CommentBox from '../../components/common/commentBox';
+import OptBox from './components/optBox';
 import {IPostDetail} from '../../interface/index';
 import DocumentTitle from 'react-document-title';
 import {useTranslation} from 'react-i18next'
 import {Row, Col} from 'antd';
 import './index.scss';
 import { random } from 'lodash';
+import AuthorBox from '../common/authorBox';
 
 interface IProps {
   postID: number
@@ -121,9 +123,11 @@ const Article = (props: IProps) => {
     <DocumentTitle title={`${t('site_name')}: ${postData.article.article.title}`}>
       <div className='act__container'>
       <Row gutter={20}>
-        <Col className="gutter-row" span={3}>
+        <Col className="gutter-row act__sider--left" span={2}>
           {/* 左侧侧边栏 */}
-          <div style={{border: '2px solid red'}}>左侧侧边栏</div>
+          <div className='sider__fixed--wrapper'>
+            <OptBox />
+          </div>
         </Col>
         <Col className="gutter-row" span={15}>
           {/* 文章详情 */}
@@ -138,9 +142,12 @@ const Article = (props: IProps) => {
           {/* 评论列表 */}
           {/* Read NEXT */}
         </Col>
-        <Col className="gutter-row" span={6}>
+        <Col className="gutter-row act__sider--right" span={7}>
           {/* 右侧侧边栏 */}
-          <div style={{border: '2px solid red'}}>右侧侧边栏</div>
+          {/* 作者信息 */}
+          <div className='sider__fixed--wrapper'>
+            <AuthorBox user={postData.article.user}/>
+          </div>
         </Col>
       </Row>
     </div>

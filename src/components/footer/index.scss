@@ -1,0 +1,70 @@
+@import '../../theme/default.scss';
+$padding_v: 30px;
+$padding_h: 30px;
+.foot__container{
+  width: 100%;
+  height: auto;
+  background-color: #D2D6DA;
+  padding: $padding_v $padding_h;
+  text-align: left;
+
+  .footer_logo--wrapper{
+    img{
+      width: 45px;
+      height: 45px;
+      border-radius: 8px;
+    }
+    p{
+      &:first-of-type{
+        margin-top: 20px;
+      }
+      margin: 10px 0;
+    }
+    .foot__contact-grp{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      button{
+        color: #64707D;
+      }
+    }
+  }
+  .footer__links--wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: center;
+    .footer__link--grp{
+      width: 100%;
+      h1{
+        color: $first_color;
+        font-size: $highlight_font_size;
+      }
+      ul{
+        padding: 0;
+        li{
+          list-style: none;
+          margin-bottom: 10px;
+          a{
+            color: $second_color;
+          }
+        }
+      }
+    }
+  }
+  .footer__fun--wrapper{
+    position: relative;
+    .footer__fun-img{
+      position: absolute;
+      right: $padding_h;
+      top: -($padding_v + 2px);
+      width: 52px;
+      height: 120px;
+      // transition: transform 0.1s ease-in;
+      &:hover{
+        transform: rotateZ(-6deg);
+        transform-origin: 80% 0;
+      }
+    }
+  }
+}

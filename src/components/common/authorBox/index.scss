@@ -1,0 +1,60 @@
+@import '../../../theme/default.scss';
+
+$ab__avatar--size: 50px;
+.authorbox__container{
+  padding: 20px;
+  position: relative;
+  &::before{
+    content: '';
+    width: 100%;
+    border-radius: $card_border_radius $card_border_radius 0 0;
+    height: 38px;
+    background-color: #0A7EB0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .ab__title--wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    .ab__user--avatar{
+      width: $ab__avatar--size;
+      height: $ab__avatar--size;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    p{
+      font-weight: $highlight_font_weight;
+      font-size: $title_font_size;
+      color: $first_color;
+      transform: translateY($ab__avatar--size/6);
+    }
+  }
+  .ab__btn--follow{
+    width: 95%;
+    background-color: $highlight_color;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    margin: 20px 0;
+    height: 40px;
+    font-weight: $highlight_font_weight;
+  }
+  .ab__info--item{
+    text-align: left;
+    margin: 10px 0;
+    p {
+      &:first-of-type{
+        font-weight: $second_highlight_font_weight;
+        font-size: $small_font_size;
+      }
+      &:nth-of-type(2){
+        font-weight: $second_highlight_font_weight;
+        font-size: $highlight_font_size;
+        color: $first_color;
+      }
+    }
+  }
+}

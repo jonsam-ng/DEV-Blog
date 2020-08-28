@@ -36,7 +36,7 @@ const Comment = (props: IProps) => {
       <HTMLRender html={content}/>
       <div className="comment__reply-wrapper">
         <div className="reply__count--left">
-          <p><HeartOutlined /><span>{like}</span></p>
+          <p><HeartOutlined className='clickable' /><span>{like}</span></p>
         </div>
         <div className="reply__right">
           <span>{t('reply')}</span>

@@ -37,4 +37,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
+}
+.comment__container .comment__reply-wrapper .reply__count--left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.comment__container .comment__reply-wrapper .reply__count--left span {
+  font-weight: 600;
+  margin-left: 5px;
+}
+.comment__container .comment__reply-wrapper .reply__right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.comment__container .comment__reply-wrapper .reply__right span:first-of-type {
+  color: #3B49DF;
+  font-weight: 800;
+  cursor: pointer;
+  margin: 0 15px;
 }

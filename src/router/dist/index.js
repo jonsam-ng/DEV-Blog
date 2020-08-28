@@ -22,6 +22,7 @@ var react_router_dom_1 = require("react-router-dom");
 var routerMap_1 = require("./routerMap");
 var Result404 = react_1.lazy(function () { return Promise.resolve().then(function () { return require('../components/common/404/result404'); }); });
 var Header = react_1.lazy(function () { return Promise.resolve().then(function () { return require('../components/header'); }); });
+var Footer = react_1.lazy(function () { return Promise.resolve().then(function () { return require('../components/footer'); }); });
 var mapRouters = function (routerMap) {
     return routerMap.map(function (item, index) { return (react_1["default"].createElement(react_router_dom_1.Route, __assign({}, item, { key: index }))); });
 };
@@ -32,5 +33,6 @@ var Routers = function () { return (react_1["default"].createElement(react_route
             react_1["default"].createElement(react_router_dom_1.Switch, null,
                 react_1["default"].createElement(react_router_dom_1.Redirect, { from: '/', to: '/home', exact: true }),
                 mapRouters(routerMap_1["default"]),
-                react_1["default"].createElement(react_router_dom_1.Route, { component: Result404 })))))); };
+                react_1["default"].createElement(react_router_dom_1.Route, { component: Result404 })))),
+    react_1["default"].createElement(Footer, null))); };
 exports["default"] = Routers;

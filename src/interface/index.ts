@@ -4,7 +4,7 @@
  * @Author: wuqingshan
  * @Date: 2020-08-03 18:19:20
  * @LastEditors: wuqingshan
- * @LastEditTime: 2020-08-26 16:22:48
+ * @LastEditTime: 2020-08-27 19:31:05
  */
 // 用于HOME页----------------------------------------- //
 // -------------------------------------------------- //
@@ -24,7 +24,6 @@
   user: {
     avatar: string,
     name: string,
-
   }
 }
 

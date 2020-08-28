@@ -8,6 +8,8 @@
     height: $ab_album_height;
   }
   .ab__content--wrapper{
+    background-color: $card_bg_color;
+    border-radius: $card_border_radius;
     padding: $card_padding;
     // ---------- 标题 ---------- //
     .ab__title--wrapper {

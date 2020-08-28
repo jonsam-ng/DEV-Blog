@@ -17,7 +17,7 @@ const ArticleBox = (props: IProps) => {
   const {postID, album, title, tags, author, postDate, updateDate, readtime, content, like, thanks, comments, readinglist} = articleDetail;
   const {userID, name, avatar, github, website, email, intro, work, company, age, joinDate, links, labels, phone} = user;
   return (
-    <div className="ab__container card">
+    <div className="ab__container">
       {/* 封面 */}  
       {
         album && <Image

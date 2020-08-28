@@ -9,6 +9,7 @@ import {HashRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 import routerMap from './routerMap';
 const Result404 = lazy(() => import('../components/common/404/result404'));
 const Header = lazy(() => import('../components/header'));
+const Footer = lazy(() => import('../components/footer'));
 
 const mapRouters = (routerMap:any) => {
     return routerMap.map((item: any, index: number) => (
@@ -21,16 +22,19 @@ const mapRouters = (routerMap:any) => {
 
 const Routers = () => (
     <Router>
+        {/* // !组件放到Router内容便于使用history */}
         <Header />
         <div className="App_Body">
-          <div className="CenterAxios">
-            <Switch>
-                <Redirect from='/' to='/home' exact></Redirect>
-                {mapRouters(routerMap)}
-                <Route component={Result404} />
-            </Switch>
-          </div>
+            {/* 居中自适应布局 */}
+            <div className="CenterAxios">
+                <Switch>
+                    <Redirect from='/' to='/home' exact></Redirect>
+                    {mapRouters(routerMap)}
+                    <Route component={Result404} />
+                </Switch>
+            </div>
         </div>
+        <Footer />
     </Router>
 );
 

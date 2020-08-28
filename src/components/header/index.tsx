@@ -14,7 +14,7 @@ const Header:React.FC = (props: any) => {
       <div className="header__wrapper--center">
         {/* 左边图标和搜索栏 */}
         <div className="header__logo--left">
-          <div className="header__blk--logo" onClick={() => {history.push('/home')}}>{t('site_name')}</div>
+          <div className="header__blk--logo" onClick={() => history.push('/home')}>{t('site_name')}</div>
           <Input.Search
             placeholder={t("search_tip")}
             onSearch={value => console.log(value)}

@@ -12,7 +12,7 @@ var Header = function (props) {
     return (react_1["default"].createElement("div", { className: 'header__container' },
         react_1["default"].createElement("div", { className: "header__wrapper--center" },
             react_1["default"].createElement("div", { className: "header__logo--left" },
-                react_1["default"].createElement("div", { className: "header__blk--logo", onClick: function () { history.push('/home'); } }, t('site_name')),
+                react_1["default"].createElement("div", { className: "header__blk--logo", onClick: function () { return history.push('/home'); } }, t('site_name')),
                 react_1["default"].createElement(antd_1.Input.Search, { placeholder: t("search_tip"), onSearch: function (value) { return console.log(value); }, className: "header__input--search" })),
             react_1["default"].createElement("div", { className: "header__profle--right" },
                 react_1["default"].createElement(antd_1.Button, { type: "primary", shape: "round", size: 'middle' }, t('write_a_post')),

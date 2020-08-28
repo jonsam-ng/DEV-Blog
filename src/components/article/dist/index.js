@@ -4,11 +4,13 @@ var react_1 = require("react");
 var articleBox_1 = require("../../components/common/articleBox");
 var postInfo_1 = require("../../components/common/postInfo");
 var commentBox_1 = require("../../components/common/commentBox");
+var optBox_1 = require("./components/optBox");
 var react_document_title_1 = require("react-document-title");
 var react_i18next_1 = require("react-i18next");
 var antd_1 = require("antd");
 require("./index.scss");
 var lodash_1 = require("lodash");
+var authorBox_1 = require("../common/authorBox");
 // TODO 通过postID请求数据
 var postData = {
     article: {
@@ -117,15 +119,17 @@ var Article = function (props) {
     return (react_1["default"].createElement(react_document_title_1["default"], { title: t('site_name') + ": " + postData.article.article.title },
         react_1["default"].createElement("div", { className: 'act__container' },
             react_1["default"].createElement(antd_1.Row, { gutter: 20 },
-                react_1["default"].createElement(antd_1.Col, { className: "gutter-row", span: 3 },
-                    react_1["default"].createElement("div", { style: { border: '2px solid red' } }, "\u5DE6\u4FA7\u4FA7\u8FB9\u680F")),
+                react_1["default"].createElement(antd_1.Col, { className: "gutter-row act__sider--left", span: 2 },
+                    react_1["default"].createElement("div", { className: 'sider__fixed--wrapper' },
+                        react_1["default"].createElement(optBox_1["default"], null))),
                 react_1["default"].createElement(antd_1.Col, { className: "gutter-row", span: 15 },
                     react_1["default"].createElement(articleBox_1["default"], { article: postData.article }),
                     react_1["default"].createElement("div", { className: "card_divider" }),
                     react_1["default"].createElement(postInfo_1["default"], { article: postData.article }),
                     react_1["default"].createElement("div", { className: "card_divider" }),
                     react_1["default"].createElement(commentBox_1["default"], { comments: postData.comments })),
-                react_1["default"].createElement(antd_1.Col, { className: "gutter-row", span: 6 },
-                    react_1["default"].createElement("div", { style: { border: '2px solid red' } }, "\u53F3\u4FA7\u4FA7\u8FB9\u680F"))))));
+                react_1["default"].createElement(antd_1.Col, { className: "gutter-row act__sider--right", span: 7 },
+                    react_1["default"].createElement("div", { className: 'sider__fixed--wrapper' },
+                        react_1["default"].createElement(authorBox_1["default"], { user: postData.article.user })))))));
 };
 exports["default"] = Article;

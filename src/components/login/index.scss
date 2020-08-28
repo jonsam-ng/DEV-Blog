@@ -1,0 +1,158 @@
+@import '../../theme/default.scss';
+.login__container{
+  @media screen and (max-width: $max_center_width){
+    width: 100%;
+  }
+  @media screen and (min-width: $max_center_width){
+    width: $max_center_width;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  .lo__banner--wrapper{
+    width: 80%;
+    background-color: #FFFDC4;
+    border: 5px solid #FEFA87;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    img{
+      width: 150px;
+      height: 150px;
+      border-radius: 5px;
+    }
+    h1{
+      font-weight: $highlight_font_weight;
+      font-size: $title_font_size;
+      color: $first_color;
+      margin: 20px 0;
+    }
+    h2{
+      font-weight: $second_highlight_font_weight;
+      font-size: $small_font_size;
+      color: $second_color;
+    }
+  }
+  .lo__login--wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 40px 0;
+    width: 45%;
+    text-align: left;
+    position: relative;
+    // 回形针
+    &::before{
+      content: '';
+      width: 100px;
+      height: 100px;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-image: url('../../assets/images/paper_clip.png') ;
+      background-size: cover;
+      transform: translate(-40%, -40%);
+    }
+    .lo__login--tabs{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // border: 1px solid #F0F0F0;
+      background-color: #FFFDC4;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+      li{
+        font-weight: $highlight_font_weight;
+        font-size: $title_font_size;
+        transition: background-color 0.3s ease-in-out;
+        list-style: none;
+        width: 50%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        display: inline-block;
+        flex: 1;
+        a{
+          color: $first_color;
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+        a.active{
+          background-color: #ffffff;
+        }
+        &:hover{
+
+        }
+      }
+    }
+    .lo__login--box{
+      background-color: $card_bg_color;
+      padding: $card_padding;
+      width: 100%;
+      ::placeholder{
+        font-size: $small_font_size;
+      }
+      .lo__login--tip{
+        font-weight: $second_highlight_font_weight;
+        color: $first_color;
+        margin-bottom: 20px;
+      }
+      .lo__login--remme{
+        button{
+          margin-right: 8px;
+        }
+        span{
+          font-size: $small_font_size;
+          color: $second_color;
+        }
+      }
+      .lo__login--now{
+        .ant-form-item-control-input-content{
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          button{
+            border-radius: 5px;
+            background-color: $highlight_color;
+            border: none;
+          }
+        }
+      }
+      .lo__social--wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: left;
+        text-align: left;
+        .loginbox__wrapper--btns{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          margin: 20px 0;
+          button{
+            &:first-of-type{
+              margin-right: 20px;
+              background-color: $first_color;
+            }
+            flex: 1;
+            border-radius: 8px;
+            background-color: #1EA1F1;
+          }
+        }
+      }
+    }
+    .lo__forget--pass{
+      font-size: $small_font_size;
+    }
+  }
+}

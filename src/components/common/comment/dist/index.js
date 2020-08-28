@@ -24,7 +24,7 @@ var Comment = function (props) {
         react_1["default"].createElement("div", { className: "comment__reply-wrapper" },
             react_1["default"].createElement("div", { className: "reply__count--left" },
                 react_1["default"].createElement("p", null,
-                    react_1["default"].createElement(icons_1.HeartOutlined, null),
+                    react_1["default"].createElement(icons_1.HeartOutlined, { className: 'clickable' }),
                     react_1["default"].createElement("span", null, like))),
             react_1["default"].createElement("div", { className: "reply__right" },
                 react_1["default"].createElement("span", null, t('reply'))))));

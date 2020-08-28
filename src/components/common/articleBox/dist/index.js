@@ -12,7 +12,7 @@ var ArticleBox = function (props) {
     var articleDetail = article.article, user = article.user;
     var postID = articleDetail.postID, album = articleDetail.album, title = articleDetail.title, tags = articleDetail.tags, author = articleDetail.author, postDate = articleDetail.postDate, updateDate = articleDetail.updateDate, readtime = articleDetail.readtime, content = articleDetail.content, like = articleDetail.like, thanks = articleDetail.thanks, comments = articleDetail.comments, readinglist = articleDetail.readinglist;
     var userID = user.userID, name = user.name, avatar = user.avatar, github = user.github, website = user.website, email = user.email, intro = user.intro, work = user.work, company = user.company, age = user.age, joinDate = user.joinDate, links = user.links, labels = user.labels, phone = user.phone;
-    return (react_1["default"].createElement("div", { className: "ab__container card" },
+    return (react_1["default"].createElement("div", { className: "ab__container" },
         album && react_1["default"].createElement(Image_1["default"], { url: album, className: 'ab__image--album' }),
         react_1["default"].createElement("div", { className: "ab__content--wrapper" },
             react_1["default"].createElement("div", { className: "ab__title--wrapper" },
